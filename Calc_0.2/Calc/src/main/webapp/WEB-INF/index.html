@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор теоремы косинуса</title>
+</head>
+<body>
+    <form action="http://localhost:8080/Calc_war" method="get">
+        <label> Сторона В
+            <input type="number" name="sideB">
+        </label>
+        <br>
+        <label>Сторона С
+            <input type="number" name="sideC">
+        </label>
+        <br>
+        <label>Угол
+            <input type="number" name="alfa">
+        </label>
+        <br>
+        Единицы измерения угла:<label> Градусы
+        <input type="radio" name="units" value="degree" checked>
+    </label>
+        <label>Радианы <input type="radio" name="units" value="radians"></label>
+        <br>
+        <button type="submit">Расчетать</button>
+        <br>
+        <p>Сторона А равна: ${res}</p>
+    </form>
+    
+</body>
+</html>

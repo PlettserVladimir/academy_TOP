@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="420.0" prefWidth="384.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.top.quotageneratorclient.Controller">
+   <children>
+      <BorderPane layoutX="-1.0" layoutY="-2.0" prefHeight="410.0" prefWidth="382.0">
+         <top>
+            <HBox prefHeight="100.0" prefWidth="361.0" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox prefHeight="100.0" prefWidth="154.0">
+                     <children>
+                        <Label text="IP Address">
+                           <VBox.margin>
+                              <Insets left="5.0" top="15.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label text="Port">
+                           <VBox.margin>
+                              <Insets left="5.0" top="15.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label text="Quote of the Day:">
+                           <VBox.margin>
+                              <Insets left="5.0" top="20.0" />
+                           </VBox.margin>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="100.0" prefWidth="115.0">
+                     <children>
+                        <TextField fx:id="ipAddressServer">
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <TextField fx:id="portServer">
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </TextField>
+                     </children>
+                  </VBox>
+                  <Button fx:id="connectButton" mnemonicParsing="false" onAction="#connectToServer" text="Connect">
+                     <HBox.margin>
+                        <Insets left="20.0" top="25.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </top>
+         <center>
+            <TextArea fx:id="outQuote" prefHeight="181.0" prefWidth="382.0" BorderPane.alignment="CENTER" />
+         </center>
+         <bottom>
+            <Button fx:id="generateButton" mnemonicParsing="false" onAction="#generateQuote" prefHeight="24.0" prefWidth="153.0" text="Generate" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets bottom="10.0" top="10.0" />
+               </BorderPane.margin>
+            </Button>
+         </bottom>
+      </BorderPane>
+   </children>
+</Pane>
